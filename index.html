@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./1.css">
+	<title>Web_1</title>
+	<style>
+		body { color: dimgray;}
+		a {text-decoration: none}
+		.hd h1	{
+			border-bottom: 1px solid gray;
+			text-align: center;
+			}
+		#grid1{
+			display: grid;
+			grid-template-columns: 150px 1fr 150px;		
+		}
+		.nav {
+			border-right: 1px solid gray;
+			margin-left: -25px; }
+		.list {
+			list-style: none;
+			margin-bottom: 2px;
+		}
+		.list a {
+			color:#09f;
+/*			background-color: gray;*/
+			font-size: 1.3em
+		}
+		.list a:hover{
+			color: orangered;
+		}
+		main{
+			margin-left: 10px
+		}		
+		aside{
+			border-left: 1px solid gray;
+		}
+		aside >img {
+			margin-left: 5px;
+		}
+		footer {
+			text-align: center;
+			border-top: 1px solid gray;
+			margin-top: 10px;
+			text-decoration: none;
+		}
+		footer a {
+			color:dimgrey;
+			font-weight: bold;
+		}
+		@media(max-width: 800px) {
+			#grid1 {
+				display: block;
+			}
+			.nav  {
+				border-right: none;
+			}
+			aside  {border-left: none;}
+		}
+	</style>
+</head>
+<body>
+	<header class="hd">
+		<h1><a href="./index.html">WeB</a></h1>
+		<!--<input type="button" value="night" onclick="
+			document.querySelector('body').style.backgroundColor = 'black';
+			document.querySelector('body').style.color = 'white';
+		">
+		<input  type="button" value="day" onclick="
+			document.querySelector('body').style.backgroundColor = 'white';
+			document.querySelector('body').style.color = 'black';
+		  ">-->
+		<input id ="night_day" type="button" value="night" onclick="
+	  	  var target = document.querySelector('body');
+		  if(this.value === 'night') {
+		 	target.style.backgroundColor = 'black';
+			target.style.color = 'white';
+			this.value ='day';
+		  }else {
+		  	target.style.backgroundColor = 'white';
+			target.style.color = 'black';
+			this.value = 'night';
+		  }
+		">
+
+	</header>
+	
+	<section id="grid1">
+		<nav class="nav">
+			<ul class="container">
+				<li class="list"><a href="./1.html">HTML</a></li>
+				<li class="list"><a href="./2.html">CSS</a></li>
+				<li class="list"><a href="./3.html">JavaScript</a></li>
+			</ul>
+		</nav>
+		<main class="main">
+			<h2>Web is...</h2>
+			<p><b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. Iusto doloribus, quibusdam necessitatibus ut fugit corporis quas velit laboriosam, facere praesentium, nobis inventore consequuntur. Molestiae provident inventore hic doloremque laborum possimus cum facere autem eos officia ipsa fugiat alias, illum tempore adipisci, culpa odio non, eveniet esse laboriosam labore unde omnis?
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam libero non, cupiditate dicta ab doloribus adipisci laborum praesentium, suscipit minus.</p>
+			<img src="./수지3.jpg"  width="100%" alt="수지">
+			<video poster="./수지.jpg" src="./suji.mp4" width="100%"></video>
+			
+		</main>
+
+		<aside class="ad">
+			<img src="https://via.placeholder.com/150/09f/fff" alt="" >
+			<img src="https://via.placeholder.com/150/09f/fff" alt="" >
+		</aside>
+	</section>		
+	<footer>
+		<a href="none">모바일버전</a>
+	</footer>
+</body>
+</html>
