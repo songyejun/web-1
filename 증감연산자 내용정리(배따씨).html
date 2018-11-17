@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>증감 연산자</title>
+</head>
+<body>
+	<script>
+		var n1, n2, n3, n4, n5, n6, n7, n8;
+		n1= 5; /* n1=5 */
+		document.write( '처음 n1 =', n1, '<br>');
+		
+		n2 = ++n1; 
+		document.write('++n1 후 n1 = ', n1, '<br>');/* n1+1=6 */
+		document.write('n2 = ', n2, '<br><hr>')
+		
+		n3 = 5;
+		document.write('처음 n3 = ', n3, '<br>');
+		
+		n4 = n3++; /* n3에 있는 값이(n3=5) 먼저 n4에 대입  후 n3의 값을 하나 증가시킨다==>그러므로 n3=5가 되고 n4=6이 된다*/
+		document.write('n3++ 후 n3 = ', n3, '<br>');
+		document.write('n4 = ', n4, '<br>' );
+	</script>
+</body>
+</html>
